@@ -1,15 +1,21 @@
 {
   "users": [
     {
-      "name": "Vishesh Bajpayee",
-      "age": "sdf",
-      "address": "F 54/4, Luvkush Awas Vihar, Sukhliya, Indore",
+      "id": 1,
+      "username": "anonyminator",
+      "email": "vishesh.bajpayee@icloud.co.ijn"
+    },
+    {
+      "username": "anonyminator",
       "email": "vishesh.bajpayee@icloud.com",
-      "phone": "07987852367",
-      "sex": "sdf",
-      "place": "cbdfb",
-      "guardian": "dfg",
-      "id": 1
+      "password": "asdfghjkkyhtr",
+      "id": 2
+    },
+    {
+      "username": "anonyminator",
+      "email": "vishesh.bajpayee@icloud.com",
+      "password": "zdxfghgfd",
+      "id": 3
     }
   ]
 }
