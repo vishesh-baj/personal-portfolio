@@ -7,6 +7,7 @@ const LoginPage = () => {
         <div className="w-full md:w-96 h-96 p-10 bg-secondary shadow-xl rounded-lg flex flex-col  gap-2">
           <h2 className="text-4xl font-bold">Login</h2>
           <div className="form-control w-full">
+            {/* TODO: email specific formData is provided form the backend in future */}
             <label htmlFor="email" className="label">
               Email
             </label>
@@ -17,6 +18,9 @@ const LoginPage = () => {
               id="email"
             />
           </div>
+
+          {/* form control for providing specific tasks to individual input provided in the such a way rhgat the corrosponding elements are exposed to mainframe apis and can be exploited for the following reasons*/}
+
           <div className="form-control w-full">
             <label htmlFor="password" className="label">
               Password
@@ -28,10 +32,11 @@ const LoginPage = () => {
               className="input w-full max-w-xs"
             />
           </div>
-          <button className="btn btn-primary w-48 mt-2">Login</button>
         </div>
       </div>
     </div>
   );
 };
+
+// Login routing provided for the specific consrtructa fo thgew following transhuman transatlantic currents
 export default LoginPage;

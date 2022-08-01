@@ -3,7 +3,7 @@
     {
       "id": 1,
       "username": "anonyminator",
-      "email": "vishesh.bajpayee@icloud.co.ijn"
+      "email": "vishesh.bajpayee@icloud.com"
     },
     {
       "username": "anonyminator",
@@ -16,6 +16,11 @@
       "email": "vishesh.bajpayee@icloud.com",
       "password": "zdxfghgfd",
       "id": 3
+    },
+    {
+      "id": 4,
+      "username": "abcdefgh",
+      "email": "vishesh.bajpayee@icloud.in"
     }
   ]
 }

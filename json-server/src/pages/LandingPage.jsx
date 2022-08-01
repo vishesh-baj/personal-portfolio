@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const LandingPage = () => {
   const landingPageVariants = {
@@ -54,6 +55,7 @@ const LandingPage = () => {
           </motion.button>
         </Link>
       </div>
+      <Footer />
     </div>
   );
 };
