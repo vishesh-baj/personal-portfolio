@@ -6,6 +6,7 @@ import GlobalStyles from "./styles/GlobalStyles";
 import { dark } from "./styles/Themes";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 import { AnimatePresence } from "framer-motion";
+import About from "./sections/About";
 function App() {
   const containerRef = useRef(null);
 
@@ -31,6 +32,7 @@ function App() {
             {/* APPLICATION CONTENT */}
             <AnimatePresence>
               <Home />
+              <About />
             </AnimatePresence>
           </main>
         </LocomotiveScrollProvider>
