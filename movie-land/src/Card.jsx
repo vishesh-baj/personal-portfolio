@@ -25,3 +25,12 @@ const Card = ({ movie1 }) => {
 };
 
 export default Card;
+
+import React, { Component } from "react";
+
+class Welcome extends Component {
+  render() {
+    <h1>Class Component</h1>;
+  }
+  componentDidMount() {}
+}
