@@ -28,6 +28,7 @@ import {
 import { TbApi } from "react-icons/tb";
 import { GiDaisy } from "react-icons/gi";
 import { MdHttp } from "react-icons/md";
+import { BiCoffeeTogo } from "react-icons/bi";
 const Home = () => {
   const [navToggle, setNavToggle] = useState(false);
   return (
@@ -42,7 +43,7 @@ const Home = () => {
           <GiHamburgerMenu
             size={20}
             color="white"
-            className="absolute right-5 top-5 z-10 cursor-pointer"
+            className="absolute right-5 top-5 z-30 cursor-pointer"
             onClick={() => setNavToggle(!navToggle)}
           />
         )}
@@ -50,7 +51,7 @@ const Home = () => {
           <IoClose
             size={20}
             color="white"
-            className="absolute right-5 top-5 z-10 cursor-pointer"
+            className="absolute right-5 top-5  cursor-pointer z-30"
             onClick={() => setNavToggle(!navToggle)}
           />
         )}
@@ -67,7 +68,14 @@ const Home = () => {
               technical integration and deployment of ideas in practical world.
             </p>
           </div>
-          <div className="w-1/2 h-1/2 bg-teal-800"></div>
+          <div className="w-1/2 h-1/2 bg-gradient-to-r from-teal-400 relative cursor-pointer hover:bg-gradient-to-r hover:from-cyan-500 transition duration-[3s] ease-in">
+            <div className="absolute top-0 left-0 bottom-0 right-0 bg-black bg-opacity-60 flex flex-col justify-center items-center">
+              <BiCoffeeTogo className="text-5xl text-white" />
+              <h1 className="text-white z-10 font-bold text-3xl">
+                BUY ME A COFFEE
+              </h1>
+            </div>
+          </div>
           <div className="w-full h-1/2 bg-black p-10 flex flex-col gap-5">
             <h1 className="text-white text-5xl font-bold uppercase   ">
               Professional Skills
@@ -140,7 +148,8 @@ const Home = () => {
                 <SiGreensock className="text-lime-400" size={40} /> Gsap
               </h2>
               <h2 className="flex flex-col items-center gap-2 text-white font-semibold">
-                <SiStyledcomponents className="text-yellow-600" size={40} /> Styled Components
+                <SiStyledcomponents className="text-yellow-600" size={40} />{" "}
+                Styled Components
               </h2>
               <h2 className="flex flex-col items-center gap-2 text-white font-semibold">
                 <SiRedux className="text-purple-400" size={40} /> Redux
