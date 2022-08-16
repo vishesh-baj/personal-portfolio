@@ -14,6 +14,7 @@ import MuiImageList from "./components/MuiImageList";
 import MuiNavbar from "./components/MuiNavbar";
 import MuiLink from "./components/MuiLink";
 import MuiBreadcrumb from "./components/MuiBreadcrumb";
+import MuiDrawer from "./components/MuiDrawer";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
       <MuiNavbar />
       <MuiLink />
       <MuiBreadcrumb />
+      <MuiDrawer />
     </div>
   );
 };
