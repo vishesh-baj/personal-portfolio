@@ -1,10 +1,10 @@
-import { Box, Stack, Divider, Grid } from "@mui/material";
+import { Box, Stack, Divider, Grid, Paper } from "@mui/material";
 
 const MuiLayout = () => {
   // replacement to div tag
   //   has sx prop
   return (
-    <>
+    <Paper elevation={4} sx={{ padding: "32px" }}>
       <Stack
         spacing={2}
         direction="row"
@@ -57,7 +57,7 @@ const MuiLayout = () => {
           </Box>
         </Grid>
       </Grid>
-    </>
+    </Paper>
   );
 };
 

@@ -8,6 +8,7 @@ import MuiSelect from "./components/MuiSelect";
 import MuiSwitch from "./components/MuiSwitch";
 import MuiTextfields from "./components/MuiTextfields";
 import MuiTypography from "./components/MuiTypography";
+import MuiCard from "./components/MuiCard";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <MuiRating />
       <MuiAutocomplete />
       <MuiBox />
+      <MuiCard />
     </div>
   );
 };
