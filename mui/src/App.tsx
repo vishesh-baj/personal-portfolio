@@ -9,6 +9,7 @@ import MuiSwitch from "./components/MuiSwitch";
 import MuiTextfields from "./components/MuiTextfields";
 import MuiTypography from "./components/MuiTypography";
 import MuiCard from "./components/MuiCard";
+import MuiAccordian from "./components/MuiAccordian";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       <MuiAutocomplete />
       <MuiBox />
       <MuiCard />
+      <MuiAccordian />
     </div>
   );
 };
