@@ -1,3 +1,5 @@
+import MuiAutocomplete from "./components/MuiAutocomplete";
+import MuiBox from "./components/MuiBox";
 import MuiButton from "./components/MuiButton";
 import MuiCheckbox from "./components/MuiCheckbox";
 import MuiRadio from "./components/MuiRadio";
@@ -18,6 +20,8 @@ const App = () => {
       <MuiCheckbox />
       <MuiSwitch />
       <MuiRating />
+      <MuiAutocomplete />
+      <MuiBox />
     </div>
   );
 };
