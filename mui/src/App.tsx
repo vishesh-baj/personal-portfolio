@@ -1,4 +1,5 @@
 import MuiButton from "./components/MuiButton";
+import MuiSelect from "./components/MuiSelect";
 import MuiTextfields from "./components/MuiTextfields";
 import MuiTypography from "./components/MuiTypography";
 
@@ -8,6 +9,7 @@ const App = () => {
       <MuiTypography />
       <MuiButton />
       <MuiTextfields />
+      <MuiSelect />
     </div>
   );
 };
