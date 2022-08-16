@@ -1,5 +1,5 @@
 import MuiAutocomplete from "./components/MuiAutocomplete";
-import MuiBox from "./components/MuiBox";
+import MuiBox from "./components/MuiLayout";
 import MuiButton from "./components/MuiButton";
 import MuiCheckbox from "./components/MuiCheckbox";
 import MuiRadio from "./components/MuiRadio";
