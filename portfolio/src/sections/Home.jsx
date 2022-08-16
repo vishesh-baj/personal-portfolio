@@ -28,11 +28,12 @@ import {
 import { TbApi } from "react-icons/tb";
 import { GiDaisy } from "react-icons/gi";
 import { MdHttp } from "react-icons/md";
-import { BiCoffeeTogo } from "react-icons/bi";
+
 const Home = () => {
   const [navToggle, setNavToggle] = useState(false);
   return (
     <div
+      id="section-1"
       className="w-screen h-screen relative flex bg-black"
       data-scroll-section
     >
@@ -42,48 +43,71 @@ const Home = () => {
         {!navToggle && (
           <GiHamburgerMenu
             size={20}
-            color="white"
-            className="absolute right-5 top-5 z-30 cursor-pointer"
+            className="absolute right-5 top-5 z-30 cursor-pointer text-teal-400"
             onClick={() => setNavToggle(!navToggle)}
           />
         )}
         {navToggle && (
           <IoClose
             size={20}
-            color="white"
-            className="absolute right-5 top-5  cursor-pointer z-30"
+            className="absolute right-5 top-5  cursor-pointer text-teal-400 z-30"
             onClick={() => setNavToggle(!navToggle)}
           />
         )}
-        <div className="flex  flex-wrap w-full h-screen  ">
-          <div className="w-1/2 h-1/2 bg-black p-10 flex flex-col  justify-center">
-            <h1 className="text-white text-5xl font-bold uppercase   ">
-              Profile
-            </h1>
-            <p className="text-white text-sm font-semibold">
-              <br />
-              Highly motivated to work on developing skills and grow
-              professionally. I am confident in my ability to ideate innovative
-              solutions to problems in software space. Keen interest in
-              technical integration and deployment of ideas in practical world.
-            </p>
-          </div>
-          <div className="w-1/2 h-1/2 bg-gradient-to-r from-teal-400 relative cursor-pointer hover:bg-gradient-to-r hover:from-cyan-500 transition duration-[3s] ease-in">
-            <div className="absolute top-0 left-0 bottom-0 right-0 bg-black bg-opacity-60 flex flex-col justify-center items-center">
-              <BiCoffeeTogo className="text-5xl text-white" />
-              <h1 className="text-white z-10 font-bold text-3xl">
-                BUY ME A COFFEE
-              </h1>
+
+        <div
+          className="absolute rotate-[90deg] top-48 -right-[75px] z-20 cursor-pointer 
+        "
+        >
+          <h1 className="text-teal-400 z-10 font-bold text-2xl">
+            BUY ME A COFFEE
+          </h1>
+        </div>
+
+        <div className="flex  flex-wrap w-full h-screen">
+          <div className="h-1/2 ">
+            <div className="w-[70vw] h-1/2 bg-black p-10 flex flex-col  justify-center">
+              <div>
+                <h1 className="text-teal-400 text-5xl font-bold uppercase   ">
+                  Profile
+                </h1>
+                <p className="text-white text-sm font-semibold">
+                  <br />
+                  Highly motivated to work on developing skills and grow
+                  professionally. I am confident in my ability to ideate
+                  innovative solutions to problems in software space. Keen
+                  interest in technical integration and deployment of ideas in
+                  practical world.
+                </p>
+              </div>
+            </div>
+            <div className="w-[70vw] h-1/2 bg-black p-10 flex flex-col  justify-center">
+              <div>
+                <h1 className="text-teal-400 text-5xl font-bold uppercase   ">
+                  Personal Skills
+                </h1>
+                <ul className="list-disc flex flex-col gap-2 pt-5 pl-10 ">
+                  <li className="text-white">
+                    <h1>PART-TIME - GRAPHIC DESIGNER</h1>
+                  </li>
+                  <li className="text-white">
+                    <h1>FREELANCE - CONTENT WRITER </h1>
+                  </li>
+                  <li className="text-white">
+                    <h1>PART-TIME - ANCHOR</h1>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+
           <div className="w-full h-1/2 bg-black p-10 flex flex-col gap-5">
-            <h1 className="text-white text-5xl font-bold uppercase   ">
+            <h1 className="text-teal-400 text-5xl font-bold uppercase   ">
               Professional Skills
             </h1>
             <h1 className="text-white text-lg font-semibold  pl-2">
               Development
             </h1>
-
             <div className="flex gap-5">
               <h2 className="flex flex-col items-center gap-2 text-white font-semibold">
                 <DiHtml5 className="text-orange-500" size={40} /> HTML5

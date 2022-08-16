@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "Sans Serif"],
+        poppins: ["Poppins", "Sans Serif"],
       },
     },
   },
