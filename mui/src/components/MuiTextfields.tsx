@@ -10,6 +10,7 @@ const MuiTextfields = () => {
   const handleVisiblity = () => {
     setIsVisible(!isVisible);
   };
+
   return (
     <Stack spacing={4}>
       <Stack spacing={2} direction="row" mt={5}>

@@ -10,6 +10,7 @@ import MuiTextfields from "./components/MuiTextfields";
 import MuiTypography from "./components/MuiTypography";
 import MuiCard from "./components/MuiCard";
 import MuiAccordian from "./components/MuiAccordian";
+import MuiImageList from "./components/MuiImageList";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
       <MuiBox />
       <MuiCard />
       <MuiAccordian />
+      <MuiImageList />
     </div>
   );
 };
