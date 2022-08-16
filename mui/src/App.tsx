@@ -11,6 +11,9 @@ import MuiTypography from "./components/MuiTypography";
 import MuiCard from "./components/MuiCard";
 import MuiAccordian from "./components/MuiAccordian";
 import MuiImageList from "./components/MuiImageList";
+import MuiNavbar from "./components/MuiNavbar";
+import MuiLink from "./components/MuiLink";
+import MuiBreadcrumb from "./components/MuiBreadcrumb";
 
 const App = () => {
   return (
@@ -28,6 +31,9 @@ const App = () => {
       <MuiCard />
       <MuiAccordian />
       <MuiImageList />
+      <MuiNavbar />
+      <MuiLink />
+      <MuiBreadcrumb />
     </div>
   );
 };
