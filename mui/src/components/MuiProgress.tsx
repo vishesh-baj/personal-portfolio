@@ -16,7 +16,3 @@ const MuiProgress = () => {
 };
 
 export default MuiProgress;
-
-
-
-
