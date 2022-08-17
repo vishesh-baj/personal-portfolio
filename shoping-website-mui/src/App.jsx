@@ -1,7 +1,9 @@
-import { Button, Container, ThemeProvider } from "@mui/material";
+import { Button, Container, ThemeProvider, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import React, { useEffect } from "react";
 import AppBar from "./components/AppBar";
 import Banner from "./components/Banner";
+import Products from "./components/Products";
 import Promotions from "./components/Promotions";
 import theme from "./styles/theme";
 const App = () => {
@@ -16,10 +18,15 @@ const App = () => {
         <AppBar />
         <Banner />
         <Promotions />
+        <Box>
+          <Typography variant="h4" textAlign={"center"} py={4}>
+            Our Products
+          </Typography>
+        </Box>
+        <Products />
         {/*
       
-      Title
-      Products 
+    
       Footer
       Searchbox
       appDrawer

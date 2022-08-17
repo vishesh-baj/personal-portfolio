@@ -11,6 +11,7 @@ const messages = [
   "Winter sale starts now, visit anyt store",
   "Get free coupons wirth 500 on purchase over 1000Rs",
 ];
+
 const Promotions = () => {
   const containerRef = useRef(null);
   const [messageIndex, setMessageIndex] = useState(0);

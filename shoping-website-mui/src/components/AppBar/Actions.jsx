@@ -14,13 +14,14 @@ const Actions = ({ matches }) => {
     : ActionsIconContainerDesktop;
 
   return (
-    <div>
+    <>
       <Component>
         <MyList type="row">
           <ListItemButton sx={{ justifyContent: "center" }}>
             <ListItemIcon
               sx={{
                 display: "flex",
+
                 justifyContent: "center",
                 color: matches && Colors.secondary,
               }}
@@ -54,7 +55,7 @@ const Actions = ({ matches }) => {
           </ListItemButton>
         </MyList>
       </Component>
-    </div>
+    </>
   );
 };
 
