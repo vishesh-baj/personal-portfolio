@@ -2,6 +2,7 @@ import { Button, Container, ThemeProvider } from "@mui/material";
 import React, { useEffect } from "react";
 import AppBar from "./components/AppBar";
 import Banner from "./components/Banner";
+import Promotions from "./components/Promotions";
 import theme from "./styles/theme";
 const App = () => {
   // first page render
@@ -14,9 +15,9 @@ const App = () => {
       <Container maxWidth="xl" sx={{ background: "#fff" }}>
         <AppBar />
         <Banner />
+        <Promotions />
         {/*
       
-      Promotions 
       Title
       Products 
       Footer
