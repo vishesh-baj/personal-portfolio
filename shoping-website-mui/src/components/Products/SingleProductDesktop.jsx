@@ -5,17 +5,20 @@ import {
   Product,
   ProductActionButton,
   ProductActionsWrapper,
-  ProductAddToCard,
   ProductFavButton,
   ProductImage,
 } from "../../styles/product";
 import ProductMeta from "./ProductMeta";
 
-const SingleProduct = ({ product, matches }) => {
+const SingleProductDesktop = ({ product, matches }) => {
   return (
     <>
       <Product>
         <ProductImage src={product.image} />
+        <ProductFavButton isFav={0}>
+          <Favorite />
+        </ProductFavButton>
+
         <ProductMeta product={product} matches={matches} />
         <ProductActionsWrapper>
           <Stack direction="row">
@@ -31,9 +34,8 @@ const SingleProduct = ({ product, matches }) => {
           </Stack>
         </ProductActionsWrapper>
       </Product>
-      <ProductAddToCard variant="contained">Add to cart</ProductAddToCard>
     </>
   );
 };
 
-export default SingleProduct;
+export default SingleProductDesktop;

@@ -7,7 +7,7 @@ export const Product = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  [theme.breakpoints.down("md")]: {
+  [theme.breakpoints.up("md")]: {
     position: "relative",
   },
 }));

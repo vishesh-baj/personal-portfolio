@@ -2,6 +2,7 @@ import { Grid, useMediaQuery, useTheme, Container } from "@mui/material";
 import React from "react";
 import { products } from "../../data";
 import SingleProduct from "./SingleProduct";
+import SingleProductDesktop from "./SingleProductDesktop";
 const Products = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
@@ -17,7 +18,11 @@ const Products = () => {
       justifyContent="center"
       alignItems="center"
     >
-      <SingleProduct product={product} matches={matches} />
+      {matches ? (
+        <SingleProduct product={product} matches={matches} />
+      ) : (
+        <SingleProductDesktop product={product} matches={matches} />
+      )}
     </Grid>
   ));
   return (
