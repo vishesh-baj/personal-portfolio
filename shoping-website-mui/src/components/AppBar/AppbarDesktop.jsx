@@ -7,6 +7,7 @@ import Actions from "./Actions";
 const AppbarDesktop = ({ matches }) => {
   return (
     <>
+      {/* parent wrapper */}
       <AppbarContainer>
         <AppbarHeader>My Bags</AppbarHeader>
         <MyList type="row">
@@ -25,5 +26,4 @@ const AppbarDesktop = ({ matches }) => {
     </>
   );
 };
-
 export default AppbarDesktop;

@@ -24,10 +24,15 @@ export const Colors = {
   ///////////////
   // Solid Color
   ///////////////
+  // white color
   white: "#fff",
+  // black color
   black: "#000",
+  // teal color
+  teal: "#008080",
 };
 
+// theme to overright the primary and secondary colors in the color palette
 const theme = createTheme({
   palette: {
     primary: {
@@ -36,6 +41,15 @@ const theme = createTheme({
     secondary: {
       main: Colors.secondary,
     },
+    info: {
+      main: Colors.info,
+    },
+    warning: {
+      main: Colors.warning,
+    },
+    danger: {
+      main: Colors.danger,
+    },
   },
 
   components: {
@@ -43,6 +57,19 @@ const theme = createTheme({
       defaultProps: {
         disableRipple: true,
         disableElevation: true,
+      },
+    },
+    MyShopButton: {
+      styleOverrides: {
+        root: {
+          color: Colors.white,
+        },
+        primary: {
+          background: Colors.primary,
+          "&:hover": {
+            backgroundColor: lighten,
+          },
+        },
       },
     },
   },

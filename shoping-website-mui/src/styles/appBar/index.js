@@ -44,3 +44,36 @@ export const ActionsIconContainerMobile = styled(Box)(() => ({
   zIndex: 99,
   borderTop: `1px solid${Colors.border}`,
 }));
+
+export const ActionsCircus = styled("div")(({ bgColor }) => ({
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  background: bgColor,
+  flexDirection: "column",
+}));
+
+export const circus = styled("div")(() => ({
+  width: "450px",
+  height: "500px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  "&:hover": {
+    backgroundColor: "teal",
+  },
+}));
+
+export const circusStyledComponent = styled("button")(() => ({
+  padding: "5px 10px",
+  background: Colors.teal,
+  fontSize: "20px",
+  width: "100px",
+  "&:hover": {
+    background: Colors.dove_gray,
+    transform: scale("1.1"),
+  },
+}));

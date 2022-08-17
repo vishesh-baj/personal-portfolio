@@ -3,10 +3,10 @@ import React from "react";
 import { products } from "../../data";
 import SingleProduct from "./SingleProduct";
 import SingleProductDesktop from "./SingleProductDesktop";
+
 const Products = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
-
   const renderProducts = products.map((product) => (
     <Grid
       item
