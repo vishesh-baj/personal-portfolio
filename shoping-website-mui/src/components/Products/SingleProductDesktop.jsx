@@ -1,30 +1,42 @@
 import { Favorite, FitScreen, Share } from "@mui/icons-material";
 import { Stack } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import {
   Product,
   ProductActionButton,
   ProductActionsWrapper,
+  ProductAddToCard,
   ProductFavButton,
   ProductImage,
 } from "../../styles/product";
 import ProductMeta from "./ProductMeta";
 
 const SingleProductDesktop = ({ product, matches }) => {
+  const [showOptions, setShowOptions] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowOptions(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowOptions(false);
+  };
   return (
     <>
-      <Product>
+      <Product onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <ProductImage src={product.image} />
         <ProductFavButton isFav={0}>
           <Favorite />
         </ProductFavButton>
 
-        <ProductMeta product={product} matches={matches} />
-        <ProductActionsWrapper>
-          <Stack direction="row">
-            <ProductFavButton isFav={0}>
-              <Favorite />
-            </ProductFavButton>
+        {showOptions && (
+          <ProductAddToCard show={showOptions} variant="contained">
+            Add to cart
+          </ProductAddToCard>
+        )}
+
+        <ProductActionsWrapper show={showOptions}>
+          <Stack direction="column">
             <ProductActionButton>
               <Share color="primary" />
             </ProductActionButton>
@@ -34,6 +46,7 @@ const SingleProductDesktop = ({ product, matches }) => {
           </Stack>
         </ProductActionsWrapper>
       </Product>
+      <ProductMeta product={product} matches={matches} />
     </>
   );
 };
