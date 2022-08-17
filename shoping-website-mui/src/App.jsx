@@ -1,6 +1,7 @@
 import { Button, Container, ThemeProvider } from "@mui/material";
 import React, { useEffect } from "react";
 import AppBar from "./components/AppBar";
+import Banner from "./components/Banner";
 import theme from "./styles/theme";
 const App = () => {
   // first page render
@@ -12,9 +13,9 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Container maxWidth="xl" sx={{ background: "#fff" }}>
         <AppBar />
+        <Banner />
         {/*
       
-      Banner 
       Promotions 
       Title
       Products 

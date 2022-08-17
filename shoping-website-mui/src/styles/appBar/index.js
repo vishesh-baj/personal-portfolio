@@ -4,7 +4,6 @@ import "@fontsource/montez";
 import { styled } from "@mui/material/styles";
 
 // container
-
 export const AppbarContainer = styled(Box)(() => ({
   display: "flex",
   marginTop: 4,
@@ -14,7 +13,6 @@ export const AppbarContainer = styled(Box)(() => ({
 }));
 
 // header
-
 export const AppbarHeader = styled(Typography)(() => ({
   padding: "4px",
   flexGrow: 1,
