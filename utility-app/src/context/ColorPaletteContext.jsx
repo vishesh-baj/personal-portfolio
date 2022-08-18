@@ -2,8 +2,6 @@ import { createContext, useState } from "react";
 const ColorPaletteContext = createContext();
 
 export const ColorPaletteProvider = ({ children }) => {
-  const palette = "abcd";
-
   function getRandomColor() {
     var letters = "0123456789ABCDEF";
     var color = "#";
