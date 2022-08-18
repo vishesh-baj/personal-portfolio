@@ -2,13 +2,14 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import LoginContext from "../context/LoginContext";
 import Input from "../components/Input";
+
 const LoginPage = () => {
   const { register, handleSubmit, errors } = useContext(LoginContext);
 
   const navigate = useNavigate();
   const onSubmit = (data) => {
     console.log(data);
-    navigate("/");
+    navigate("/todo");
   };
 
   return (
