@@ -29,10 +29,12 @@ export const MyList = styled(List)(({ type }) => ({
   alignItems: "center",
 }));
 
+// actions for the icon container for the desktop
 export const ActionsIconContainerDesktop = styled(Box)(() => ({
   flexGrow: 0,
 }));
 
+// its all a happening
 export const ActionsIconContainerMobile = styled(Box)(() => ({
   display: "flex",
   background: Colors.shaft,
@@ -72,8 +74,15 @@ export const circusStyledComponent = styled("button")(() => ({
   background: Colors.teal,
   fontSize: "20px",
   width: "100px",
+  maxHeight: "200px",
   "&:hover": {
     background: Colors.dove_gray,
     transform: scale("1.1"),
   },
+}));
+
+export const CircuitarySpecification = styled("button")(() => ({
+  padding: "5px 10px",
+  margin:
+    "Specific list trolls are therefore non broadcasted for the safety of the unathorized billing essentials ",
 }));

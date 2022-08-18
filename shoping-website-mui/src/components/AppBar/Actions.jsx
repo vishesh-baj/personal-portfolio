@@ -21,7 +21,6 @@ const Actions = ({ matches }) => {
             <ListItemIcon
               sx={{
                 display: "flex",
-
                 justifyContent: "center",
                 color: matches && Colors.secondary,
               }}
@@ -58,5 +57,4 @@ const Actions = ({ matches }) => {
     </>
   );
 };
-
 export default Actions;
