@@ -6,20 +6,23 @@ import NotesPage from "./pages/NotesPage";
 import ColorPalette from "./pages/ColorPallettePage";
 import { LoginContextProvider } from "./context/LoginContext";
 import { TodoContextProvider } from "./context/TodoContext";
+import { ColorPaletteProvider } from "./context/ColorPaletteContext";
 
 const App = () => {
   return (
     <div data-theme="dark">
       <LoginContextProvider>
         <TodoContextProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<LoginPage />} />
-              <Route path="/todo" element={<TodoPage />} />
-              <Route path="/notes" element={<NotesPage />} />
-              <Route path="/colorPalette" element={<ColorPalette />} />
-            </Routes>
-          </BrowserRouter>
+          <ColorPaletteProvider>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/" element={<LoginPage />} />
+                <Route path="/todo" element={<TodoPage />} />
+                <Route path="/notes" element={<NotesPage />} />
+                <Route path="/colorPalette" element={<ColorPalette />} />
+              </Routes>
+            </BrowserRouter>
+          </ColorPaletteProvider>
         </TodoContextProvider>
       </LoginContextProvider>
     </div>

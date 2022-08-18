@@ -7,6 +7,8 @@ const Navbar = ({ children }) => {
     toggleRef.current.checked = false;
   };
   return (
+    // Navigatrion bar along with drawer for the side bar
+
     <div className="drawer">
       <input
         ref={toggleRef}
@@ -37,12 +39,14 @@ const Navbar = ({ children }) => {
           <div className="flex-1 px-2 mx-2">Utility App</div>
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">
-              {/* <!-- Navbar menu content here --> */}
               <li>
-                <NavLink to="/todo">TODO</NavLink>
+                <NavLink to="/todo">Todo</NavLink>
               </li>
               <li>
                 <NavLink to="/notes">Notes</NavLink>
+              </li>
+              <li>
+                <NavLink to="/colorPalette">Colors</NavLink>
               </li>
             </ul>
           </div>
@@ -60,6 +64,12 @@ const Navbar = ({ children }) => {
           </li>
           <li onClick={handleToggle}>
             <NavLink to="/notes">Notes</NavLink>
+          </li>
+
+          <li>
+            <NavLink onClick={handleToggle} to="/colorPalette">
+              Colors
+            </NavLink>
           </li>
         </ul>
       </div>
