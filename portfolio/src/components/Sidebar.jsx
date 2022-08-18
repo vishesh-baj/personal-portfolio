@@ -1,7 +1,6 @@
 import React from "react";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import CoverImage from "../assets/cover-img.png";
-import AvatarImage from "../assets/avatar.png";
 const Sidebar = ({ toggleNavigation, setNavToggle }) => {
   return (
     <>
