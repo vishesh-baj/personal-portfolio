@@ -5,6 +5,7 @@ import StudentDetailsPage from "../pages/StudentDetailsPage";
 import FacultyDetailsPage from "../pages/FacultyDetailsPage";
 import StockDetailsPage from "../pages/StockDetailsPage";
 import ErrorPage from "../pages/ErrorPage";
+
 const routes = [
   {
     key: "landingPage",
