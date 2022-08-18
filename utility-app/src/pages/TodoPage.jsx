@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import TodoContext from "../context/TodoContext";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { AiFillCheckCircle } from "react-icons/ai";
+// TODO: Integrate get post and delete with firebase
 
 const TodoPage = () => {
   const { handleChange, handleDelete, handleSubmit, currentTodo, todoList } =

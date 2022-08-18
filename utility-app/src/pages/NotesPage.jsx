@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
+// TODO: Add notes crud functionality
 const NotesPage = () => {
   return (
     <div>

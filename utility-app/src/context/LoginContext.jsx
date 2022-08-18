@@ -24,7 +24,10 @@ export const LoginContextProvider = ({ children }) => {
     // by default mode is onSubmit
     mode: "onChange",
     // sets default state of the form
-    defaultValues: { email: "name@example.com", password: "1231231231" },
+    defaultValues: {
+      email: "admin@tophatsoftware.com",
+      password: "admin@1234",
+    },
     resolver: yupResolver(validationSchema),
   });
 

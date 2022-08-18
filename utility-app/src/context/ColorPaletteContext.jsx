@@ -11,7 +11,8 @@ export const ColorPaletteProvider = ({ children }) => {
     }
     return color;
   }
-//   iterates the amount in an array of all randomly generated colors 
+
+  //   iterates the amount in an array of all randomly generated colors
   const colorListFunc = (colorCodeQuantity) => {
     let randomColorList = [];
     for (let index = 0; index < colorCodeQuantity; index++) {

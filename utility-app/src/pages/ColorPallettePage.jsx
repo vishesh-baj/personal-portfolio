@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import ColorPaletteContext from "../context/ColorPaletteContext";
+// TODO: Integrate get, post and delete with firebase, add another route to see saved color palettes
+
 const ColorPallettePage = () => {
   const { colorListFunc } = useContext(ColorPaletteContext);
   const [colorsList, setColorsList] = useState([]);

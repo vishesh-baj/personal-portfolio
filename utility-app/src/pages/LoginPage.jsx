@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LoginContext from "../context/LoginContext";
 import Input from "../components/Input";
 
+// TODO: Integrate login functionality with firebase
 const LoginPage = () => {
   const { register, handleSubmit, errors } = useContext(LoginContext);
 
