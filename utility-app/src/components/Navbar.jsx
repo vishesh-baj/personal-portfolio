@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 const Navbar = ({ children }) => {
+  // this is used to toggle sidebar with navlinks
   const toggleRef = useRef(null);
 
   const handleToggle = () => {

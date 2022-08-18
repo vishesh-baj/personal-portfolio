@@ -10,7 +10,7 @@ import { ColorPaletteProvider } from "./context/ColorPaletteContext";
 
 const App = () => {
   return (
-    <div data-theme="dark">
+    <div data-theme="synthwave">
       <LoginContextProvider>
         <TodoContextProvider>
           <ColorPaletteProvider>

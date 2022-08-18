@@ -4,6 +4,7 @@ import ColorPaletteContext from "../context/ColorPaletteContext";
 const ColorPallettePage = () => {
   const { colorListFunc } = useContext(ColorPaletteContext);
   const [colorsList, setColorsList] = useState([]);
+
   useEffect(() => {
     setColorsList(colorListFunc(4));
   }, []);
