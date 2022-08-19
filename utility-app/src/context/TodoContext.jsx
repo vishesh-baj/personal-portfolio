@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+
 const TodoContext = createContext();
 
 export const TodoContextProvider = ({ children }) => {
@@ -14,7 +15,7 @@ export const TodoContextProvider = ({ children }) => {
     setCurrentTodo("");
     console.log(todoList);
   };
-
+  // ? handleDelete to delete the todo
   const handleDelete = (idx) => {
     setTodoList(todoList.filter((_todoItem, id) => id !== idx));
   };

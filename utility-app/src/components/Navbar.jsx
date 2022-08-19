@@ -1,11 +1,16 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import LoginContext from "../context/LoginContext";
 const Navbar = ({ children }) => {
   // this is used to toggle sidebar with navlinks
   const toggleRef = useRef(null);
-
+  const { logout } = useContext(LoginContext);
   const handleToggle = () => {
     toggleRef.current.checked = false;
+  };
+
+  const handleLogout = () => {
+    logout();
   };
   return (
     // Navigatrion bar along with drawer for the side bar
@@ -37,7 +42,17 @@ const Navbar = ({ children }) => {
               </svg>
             </label>
           </div>
-          <div className="flex-1 px-2 mx-2">Utility App</div>
+          <div className="flex-1 px-2 mx-2">
+            <div className="flex gap-5  justify-between w-full">
+              <h1> Utility App</h1>
+              <button
+                onClick={handleLogout}
+                className="btn btn-primary btn-sm md:hidden"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">
               <li>
@@ -48,6 +63,11 @@ const Navbar = ({ children }) => {
               </li>
               <li>
                 <NavLink to="/colorPalette">Colors</NavLink>
+              </li>
+              <li>
+                <button onClick={handleLogout} className="btn btn-primary">
+                  Logout
+                </button>
               </li>
             </ul>
           </div>

@@ -7,24 +7,54 @@ import ColorPalette from "./pages/ColorPallettePage";
 import { LoginContextProvider } from "./context/LoginContext";
 import { TodoContextProvider } from "./context/TodoContext";
 import { ColorPaletteProvider } from "./context/ColorPaletteContext";
+import PrivateRoute from "./routes/PrivateRoute";
+import LoginRedirectionRoute from "./routes/LoginRedirectionRoute";
 
 const App = () => {
   return (
     <div data-theme="synthwave">
-      <LoginContextProvider>
-        <TodoContextProvider>
-          <ColorPaletteProvider>
-            <BrowserRouter>
+      <BrowserRouter>
+        <LoginContextProvider>
+          <TodoContextProvider>
+            <ColorPaletteProvider>
               <Routes>
-                <Route path="/" element={<LoginPage />} />
-                <Route path="/todo" element={<TodoPage />} />
-                <Route path="/notes" element={<NotesPage />} />
-                <Route path="/colorPalette" element={<ColorPalette />} />
+                <Route
+                  path="/"
+                  element={
+                    <LoginRedirectionRoute>
+                      <LoginPage />
+                    </LoginRedirectionRoute>
+                  }
+                />
+                <Route
+                  path="/todo"
+                  element={
+                    <PrivateRoute>
+                      <TodoPage />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/notes"
+                  element={
+                    <PrivateRoute>
+                      <NotesPage />
+                    </PrivateRoute>
+                  }
+                />
+                <Route
+                  path="/colorPalette"
+                  element={
+                    <PrivateRoute>
+                      <ColorPalette />
+                    </PrivateRoute>
+                  }
+                />
               </Routes>
-            </BrowserRouter>
-          </ColorPaletteProvider>
-        </TodoContextProvider>
-      </LoginContextProvider>
+            </ColorPaletteProvider>
+          </TodoContextProvider>
+        </LoginContextProvider>
+      </BrowserRouter>
     </div>
   );
 };

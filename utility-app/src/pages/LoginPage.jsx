@@ -5,11 +5,13 @@ import Input from "../components/Input";
 
 // TODO: Integrate login functionality with firebase
 const LoginPage = () => {
-  const { register, handleSubmit, errors } = useContext(LoginContext);
+  const { register, handleSubmit, errors, login } = useContext(LoginContext);
 
   const navigate = useNavigate();
-  const onSubmit = (data) => {
-    console.log(data);
+
+  const onSubmit = async (data) => {
+    const { email, password } = data;
+    login(email, password);
     navigate("/todo");
   };
 

@@ -1,10 +1,22 @@
-import { createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import {
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { auth } from "../firebase";
 const LoginContext = createContext();
 
 export const LoginContextProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => (user ? setUser(user) : setUser(null)));
+    console.log(user);
+  }, []);
+
   const validationSchema = yup.object({
     email: yup
       .string()
@@ -15,6 +27,26 @@ export const LoginContextProvider = ({ children }) => {
       .min(6, "Password must be atleast 6 characters")
       .required("Password is required"),
   });
+
+  // login to application
+  const login = async (email, password) => {
+    try {
+      const res = await signInWithEmailAndPassword(auth, email, password)
+        .then(() => localStorage.setItem("token", "token"))
+        .finally(() => location.reload());
+
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Logout of the application
+  const logout = async () => {
+    await signOut(auth)
+      .then(() => localStorage.clear())
+      .finally(() => location.reload());
+  };
 
   const {
     register,
@@ -32,7 +64,9 @@ export const LoginContextProvider = ({ children }) => {
   });
 
   return (
-    <LoginContext.Provider value={{ register, handleSubmit, errors }}>
+    <LoginContext.Provider
+      value={{ register, handleSubmit, errors, login, logout }}
+    >
       {children}
     </LoginContext.Provider>
   );
