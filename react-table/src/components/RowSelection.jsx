@@ -1,16 +1,36 @@
 import React, { useMemo } from "react";
 import { COLUMNS, GROUPED_COLUMNS } from "./columns";
 import MOCK_DATA from "./MOCK_DATA.json";
-import { useTable } from "react-table";
+import { useTable, useRowSelect } from "react-table";
+import Checkbox from "./Checkbox";
 
 const BasicTable = () => {
-  const columns = useMemo(() => GROUPED_COLUMNS, []);
+  const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
 
-  const TableInstance = useTable({
-    columns,
-    data,
-  });
+  const TableInstance = useTable(
+    {
+      columns,
+      data,
+    },
+    useRowSelect,
+    (hooks) => {
+      hooks.visibleColumns.push((columns) => {
+        return [
+          {
+            id: "Selection",
+            Header: ({ getToggleAllRowsSelectedProps }) => {
+              return <Checkbox {...getToggleAllRowsSelectedProps()} />;
+            },
+            Cell: ({ row }) => {
+              return <Checkbox {...row.getToggleRowSelectedProps()} />;
+            },
+          },
+          ...columns,
+        ];
+      });
+    }
+  );
 
   const {
     getTableProps,
@@ -19,7 +39,11 @@ const BasicTable = () => {
     rows,
     prepareRow,
     footerGroups,
+    // flat array of rows that are selected in table
+    selectedFlatRows,
   } = TableInstance;
+
+  const firstPagerows = rows.slice(0, 10);
 
   return (
     <div className="overflow-x-auto">
@@ -39,7 +63,7 @@ const BasicTable = () => {
         </thead>
 
         <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
+          {firstPagerows.map((row) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()}>
@@ -67,6 +91,13 @@ const BasicTable = () => {
           })}
         </tfoot>
       </table>
+      <pre>
+        <code>
+          {JSON.stringify({
+            selectedFlatRows: selectedFlatRows.map((row) => row.original),
+          })}
+        </code>
+      </pre>
     </div>
   );
 };

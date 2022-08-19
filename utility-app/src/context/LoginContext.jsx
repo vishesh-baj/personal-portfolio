@@ -1,22 +1,15 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import {
-  signInWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged,
-} from "firebase/auth";
+import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../firebase";
+import { useNavigate } from "react-router-dom";
+import { PATHS } from "../paths/paths";
 const LoginContext = createContext();
 
 export const LoginContextProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => (user ? setUser(user) : setUser(null)));
-    console.log(user);
-  }, []);
-
+  const navigate = useNavigate();
   const validationSchema = yup.object({
     email: yup
       .string()
@@ -37,6 +30,7 @@ export const LoginContextProvider = ({ children }) => {
 
       console.log(res);
     } catch (error) {
+      navigate(PATHS.errror);
       console.log(error);
     }
   };
