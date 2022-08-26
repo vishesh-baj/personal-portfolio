@@ -1,5 +1,44 @@
 {
-  "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "students": [
+    {
+      "id": 1,
+      "first-name": "json-server",
+      "last-name": "typicode",
+      "age": 23,
+      "blood-group": "AB+",
+      "date-of-birth": "22-10-1999",
+      "father-name": "xyz",
+      "gender": "male",
+      "department": "CS",
+      "section": "A",
+      "rollNumber": "AB1213%",
+      "contact-number": 9826602789,
+      "emergency-contact-number": 7987852367
+    },
+    {
+      "id": 2,
+      "first-name": "json-server",
+      "last-name": "typicode",
+      "age": 23,
+      "blood-group": "AB+",
+      "date-of-birth": "22-10-1999",
+      "father-name": "xyz",
+      "gender": "male",
+      "department": "CS",
+      "section": "A",
+      "rollNumber": "AB1213%",
+      "contact-number": 9826602789,
+      "emergency-contact-number": 7987852367
+    }
+  ],
+  "faculties": [
+    {
+      "id": 1,
+      "first-name": "Faculty",
+      "last-name": "lastName",
+      "contact-number": 1231231231,
+      "department": "CS"
+    }
+  ],
+  "stocks": { "name": "typicode" }
 }

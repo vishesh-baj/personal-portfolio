@@ -61,6 +61,8 @@ const SortingTable = () => {
           })}
         </tbody>
 
+        {/* footer head
+         */}
         <tfoot>
           {footerGroups.map((footerGroup) => {
             return (

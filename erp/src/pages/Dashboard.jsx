@@ -7,6 +7,7 @@ const Dashboard = () => {
     document.body.setAttribute("data-theme", themeAttribute);
     console.log(document.body);
   };
+
   return (
     <PageWrapper>
       <div className="flex flex-col md:flex-row gap-5 w-screen h-full p-5 ">
