@@ -7,6 +7,7 @@ import { useState } from "react";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { PATHS } from "../paths/paths";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ export const Login = () => {
       localStorage.setItem("access-token", response.user.accessToken);
       const token = localStorage.getItem("access-token");
       console.log(`ACCESS TOKEN: ${localStorage.getItem("access-token")}`);
-      token && navigate("/dashboard");
+      token && navigate(PATHS.dashboard);
     } catch (error) {
       console.log(error);
     }

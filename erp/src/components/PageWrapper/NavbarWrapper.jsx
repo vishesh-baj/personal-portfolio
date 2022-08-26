@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
-
+import { PATHS } from "../../paths/paths";
 const NavbarWrapper = ({ children }) => {
   const checkboxRef = useRef(null);
 
@@ -68,9 +68,9 @@ const NavbarWrapper = ({ children }) => {
                         ? "btn btn-primary text-white"
                         : "btn btn-ghost"
                     }
-                    to="/"
+                    to={PATHS.dashboard}
                   >
-                    Home
+                    Dashboard
                   </NavLink>
                 </li>
                 <li>
@@ -80,9 +80,9 @@ const NavbarWrapper = ({ children }) => {
                         ? "btn btn-primary text-white"
                         : "btn btn-ghost"
                     }
-                    to="/login"
+                    to={PATHS.students}
                   >
-                    Login
+                    Students
                   </NavLink>
                 </li>
               </ul>
@@ -101,9 +101,9 @@ const NavbarWrapper = ({ children }) => {
                     ? "btn btn-primary text-white"
                     : "btn btn-ghost"
                 }
-                to="/"
+                to={PATHS.dashboard}
               >
-                Home
+                Dashboard
               </NavLink>
             </li>
             <li>
@@ -113,9 +113,9 @@ const NavbarWrapper = ({ children }) => {
                     ? "btn btn-primary text-white"
                     : "btn btn-ghost"
                 }
-                to="/login"
+                to={PATHS.students}
               >
-                Login
+                Students
               </NavLink>
             </li>
           </ul>

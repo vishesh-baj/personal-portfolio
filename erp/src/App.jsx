@@ -2,13 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
 import { Login } from "./pages/Login";
+import Students from "./pages/Students";
+import { PATHS } from "./paths/paths";
 import {
   LoginRedirectionRoute,
   ProtectedRoute,
 } from "./routes/protectedRoutes";
 const App = () => {
   return (
-    <div data-theme="wireframe">
+    <>
       <BrowserRouter>
         <Routes>
           <Route
@@ -17,7 +19,7 @@ const App = () => {
                 <Home />
               </LoginRedirectionRoute>
             }
-            path="/"
+            path={PATHS.home}
           />
           <Route
             element={
@@ -25,7 +27,7 @@ const App = () => {
                 <Login />
               </LoginRedirectionRoute>
             }
-            path="/login"
+            path={PATHS.login}
           />
           <Route
             element={
@@ -33,11 +35,19 @@ const App = () => {
                 <Dashboard />
               </ProtectedRoute>
             }
-            path="/dashboard"
+            path={PATHS.dashboard}
+          />
+          <Route
+            element={
+              <ProtectedRoute>
+                <Students />
+              </ProtectedRoute>
+            }
+            path={PATHS.students}
           />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 };
 
