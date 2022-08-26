@@ -46,13 +46,29 @@ const FeaturesTable = () => {
     headerGroups,
     rows,
     prepareRow,
+    // When true, the hiddenColumns state will automatically reset if any of the following conditions are met:
+    // columns is changed
+    // To disable, set to false
+    setHiddenColumns,
+    //     Defaults to {}
+    // The default column object for every column passed to React Table.
+    // Column-specific properties will override the properties in this object, eg. { ...defaultColumn, ...userColumn }
+    // This is particularly useful for adding global column properties. For instance, when using the useFilters plugin hook, add a default Filter renderer for every column, eg.{ Filter: MyDefaultFilterComponent }
+    defaultColumn,
+    // Use this function to change how React Table detects unique rows and also how it constructs each row's underlying id property.
+    // Optional
+    // Must be memoized
+    // Defaults to (row, relativeIndex, parent) => parent ? [parent.id, relativeIndex].join('.') : relativeIndex
+
+    getRowId,
     initialState,
   } = tableInstance;
 
-  console.log(initialState);
   return (
     <div className="overflow-x-auto">
+      {/* there i sa certain degree of experience of ther followinf and there are so many tings in this world on which we dont have any control */}
       <table className="table w-full table-zebra" {...getTableProps()}>
+        {/* table head */}
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -62,9 +78,12 @@ const FeaturesTable = () => {
             </tr>
           ))}
         </thead>
+        {/* table body */}
         <tbody {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
+
+            // ? specific controllable component
             return (
               <tr {...row.getRowProps()}>
                 {
@@ -82,6 +101,25 @@ const FeaturesTable = () => {
                   })
                 }
               </tr>
+
+              // *  table body props specific to the seperation back to unity , 2022 they would consider to be garbage level, out of the cycle of death and birth, estungish the light of life, andfade out of existance and is associated with suffering. You are entangled by your association of this world corrosponding experinece union with god has a problem ecause thats where creation cam from first place.
+
+              //   ?            The following additional properties are available on every headerGroup object returned by the table instance.
+
+              // !headers: Array<Column>
+              // Required
+              // The columns in this header group.
+              // getHeaderGroupProps: Function(?props)
+              // Required
+              // This function is used to resolve any props needed for this header group's row.
+              //   two complimentary realities, people need god butt god also need people. so there is a symbiosis, to be in the woeld and this is the solution found in the mahayana
+              // You can use the getHeaderGroupProps hook to extend its functionality.
+              // Custom props may be passed. NOTE: Custom props will override built-in table props, so be careful!
+              // getFooterGroupProps: Function(?props)
+              // Required
+              // This function is used to resolve any props needed for this header group's footer row.
+              // You can use the getFooterGroupProps hook to extend its functionality.
+              // Custom props may be passed. NOTE: Custom props will override built-in table props, so be careful!
             );
           })}
         </tbody>
