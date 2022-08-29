@@ -32,7 +32,7 @@ const fetchUsersFaliure = (error) => {
 };
 
 // action creator
-// thuk helps to create function that are not pure and return dispatch as argument in the returned function
+// thuk helps to returb a function instead of action that are not pure and return dispatch as argument in the returned function
 const fetchUsers = () => {
   // contains dispatch
   return (dispatch) => {
