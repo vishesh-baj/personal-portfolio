@@ -4,6 +4,7 @@ import NewCakeCOntainer from "./components/NewCakeCOntainer";
 import IcecreamContainer from "./components/IcecreamContainer";
 import ItemContainer from "./components/ItemContainer";
 import store from "./store";
+import UserContainer from "./components/UserContainer";
 
 const App = () => {
   return (
@@ -12,8 +13,9 @@ const App = () => {
       {/* <JuiceContainer /> */}
       {/* <NewCakeCOntainer /> */}
       {/* <IcecreamContainer /> */}
-      <ItemContainer cake />
-      <ItemContainer />
+      {/* <ItemContainer cake /> */}
+      {/* <ItemContainer /> */}
+      <UserContainer />
     </Provider>
   );
 };
