@@ -1,6 +1,7 @@
 import React from "react";
-import { useTable } from "react-table";
+import { useTable, useFilter } from "react-table";
 
+// feature table
 const FeaturesTable = () => {
   // columns
   const columns = React.useMemo(
@@ -16,6 +17,11 @@ const FeaturesTable = () => {
     ],
     []
   );
+
+  //   table specific instances are provided for the speicifc contrillable components and therefore I must say thgat there are so many things in tihs world in this wrld and there must be a specifc controllable component required for the substances to counter the preveling symbiotic systwem provided
+
+  //    This function (or component) is used to render this column's filter UI
+
   // data
   const data = React.useMemo(
     () => [
@@ -78,6 +84,15 @@ const FeaturesTable = () => {
             </tr>
           ))}
         </thead>
+
+        <input
+          value={filterValue || ""}
+          onChange={(e) => {
+            setFilter(e.target.value || undefined); // Set undefined to remove the filter entirely
+          }}
+          placeholder={`Search ${count} records...`}
+        />
+        {/* this column will filter regardless of whaT IS PROVIDED IN THE SEUE and there fore there are so many thing inthis worl  */}
         {/* table body */}
         <tbody {...getTableBodyProps()}>
           {rows.map((row) => {
