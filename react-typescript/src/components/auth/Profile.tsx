@@ -7,3 +7,6 @@ const Profile = ({ name }: ProfileProps) => {
 };
 
 export default Profile;
+
+
+// The candidate - Yash is well versed in technical assessment. He knows basic understanding of react redux. Communication is average. Machine test should be provided for further assessment.

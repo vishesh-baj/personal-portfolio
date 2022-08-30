@@ -3,6 +3,7 @@ import Container from "./components/Container";
 import Box from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { userContextProvider } from "./components/context/UserContext";
+import { List } from "./components/generic/Lists";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
 import Input from "./components/Input";
@@ -10,6 +11,7 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
+
 const App = () => {
   const personName = { first: "Bruce", last: "Wayne" };
   // personlist object is specified for the database required fovr the upscale model of the whne i was done dying my conscience regained so i begin my strufggle anf nothingness strained out of flash made of time my new form blasted out and it started me so and I burst out a shout at which wmy legs went frantic like bugs from a nest and I ran untill drained leaving no chouce but rest so I fell asleep softly at the wdge of a cave but I shouldve gone deeper but I am not so brave I Say hey yaa yaa hey yaa yaa hey, I woke up to see that theres two mighty steads wth their moughts chirning wildly expressing my deeds, as they put my head over and laid down to file I dont need to fear there's nothing to hide.
@@ -26,6 +28,11 @@ const App = () => {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+
+      <List
+        items={["Batman", "Superman", "Wonder Woman"]}
+        onClick={(item) => console.log(item)}
+      />
 
       {/* <Greet name="Vishesh" isLoading={false} />
       <Person name={personName} />
