@@ -15,7 +15,7 @@ const Cards = () => {
                 alt="Norway"
               />
             </Card.Section>
-            {/* thr million masks of god, running the democracy of the dying world */}
+            {/* the million masks of god, running the democracy of the dying world */}
             <Group position="apart" mt="md" mb="xs">
               <Text weight={500}>Norway Fjord Adventures</Text>
               <Badge color="pink" variant="light">

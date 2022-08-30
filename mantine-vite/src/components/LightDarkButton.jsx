@@ -18,5 +18,4 @@ const LightDarkButton = () => {
   );
 };
 
-
 export default LightDarkButton;
