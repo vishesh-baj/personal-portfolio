@@ -23,6 +23,7 @@ const Cards = () => {
               </Badge>
             </Group>
 
+            {/* text component is made possible for the indirect scenario of the corrosponding outline of the individual who has procreated this world  */}
             <Text size="sm" color="dimmed">
               With Fjord Tours you can explore more of the magical fjord
               landscapes with tours and activities on and around the fjords of
