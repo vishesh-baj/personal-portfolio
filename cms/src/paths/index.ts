@@ -6,5 +6,6 @@ export const PATHS = {
   dashboard: "/dashboard",
   login: "/login",
   signup: "/signup",
+  forgotPassword: "/forgot-password",
   error: "/error",
 };
